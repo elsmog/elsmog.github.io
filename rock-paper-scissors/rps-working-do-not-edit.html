@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+</head>
+<body>
+  <h1 class="h1">Rock, Paper, Scissors?</h1>
+  <div id="greeting" class="greeting">
+    <p1>Welcome! Would you like to play a game?</p1>
+  </div><br>
+  <div id="score" class="greeting">
+    <p1>    </p1><br>
+  </div><br>
+  <div class="button">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+  </div>
+    <script>
+      let playerScore = 0;
+      let computerScore = 0;
+      let roundsPlayed = 0;
+        
+      function computerPlay() {
+        return ['rock', 'paper', 'scissors'][Math.round(Math.random() * 2)];
+      };
+    
+      function playRound(playerSelection, computerSelection) {
+        if (computerSelection === playerSelection){
+            document.getElementById("greeting").textContent = "A tie.";
+            document.getElementById("score").textContent = "Computer score - " + computerScore + 
+                " and player score - " + playerScore
+        } else if ((computerSelection === 'paper' && playerSelection === 'rock') ||
+                  (computerSelection === 'scissors' && playerSelection === 'paper') ||
+                  (computerSelection === 'rock' && playerSelection === 'scissors')) {
+            computerScore++;
+            document.getElementById("greeting").textContent = "An inferior choice.";
+            document.getElementById("score").textContent = "Computer score - " + computerScore + 
+                " and player score - " + playerScore;
+        } else {
+            playerScore++;
+            document.getElementById("greeting").textContent = "A superior choice!";
+            document.getElementById("score").textContent = "Computer score - " + computerScore + 
+                " and player score - " + playerScore;
+        };    
+      };
+
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach((button) => {
+          button.addEventListener('click', playGame);
+      });
+
+      function playGame() {
+          roundsPlayed++;
+          if (roundsPlayed < 5) {
+           playRound(this.id, computerPlay());
+          } else {
+            if (playerScore > computerScore) {
+              document.getElementById("greeting").textContent = 'Congratulations! You have won the game.';
+              document.getElementById("score").textContent = "Computer score - " + computerScore +
+                  " and player score - " + playerScore;
+            } else if (computerScore > playerScore) {
+              document.getElementById("greeting").textContent ='Condolences. You have lost the game.';
+              document.getElementById("score").textContent = "Computer score - " + computerScore +
+                  " and player score - " + playerScore;
+            } else {
+              document.getElementById("greeting").textContent = 'You have reached an impasse. Try again.';
+              document.getElementById("score").textContent = "Computer score - " + computerScore +
+                  " and player score - " + playerScore;
+            };
+         };
+      };
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elsmog's Etch-a-Sketch Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Etch A Sketch</h1>
+    <div class="btn"> 
+      <button id="reset">Reset</button>
+      <button id="resize">Resize</button>
+    </div>
+    <div id="grid-container"></div>
+    <script>
+      const gridContainer = document.getElementById("grid-container");
+      const sideSize = 16;
+
+      for (var i = 0; i < 256; i++) {
+        const gridItem = document.createElement("div");
+        gridItem.setAttribute("id", i + 1);
+        gridItem.setAttribute("class", "grid-item");
+        gridItem.addEventListener("mouseover", function(e) {
+          e.target.style.backgroundColor = "black";
+        });
+        gridContainer.appendChild(gridItem);
+      };
+      
+      function resetGrid() {
+        while (gridContainer.hasChildNodes()) {
+          gridContainer.removeChild(gridContainer.firstChild);
+        };
+        for (var i = 0; i < 256; i++) {
+        const gridItem = document.createElement("div");
+        gridItem.setAttribute("id", i + 1);
+        gridItem.setAttribute("class", "grid-item");
+        gridItem.addEventListener("mouseover", function(e) {
+          e.target.style.backgroundColor = "black";
+        });
+        gridContainer.appendChild(gridItem);
+        };
+      };
+
+      function resizeGrid() {
+        const newSize = prompt("How many squares per side?");
+        const totalSquares = newSize * newSize;
+        while (gridContainer.hasChildNodes()) {
+          gridContainer.removeChild(gridContainer.firstChild);
+        };
+        for (var i = 0; i < totalSquares; i++) {
+          const gridItem = document.createElement("div");
+          gridItem.setAttribute("id", i + 1);
+          gridItem.setAttribute("class", "grid-item");
+          gridContainer.style.setProperty("grid-template-rows", "repeat(" + newSize + ", 1fr)");
+          gridContainer.style.setProperty("grid-template-columns", "repeat(" + newSize + ", 1fr)");
+          gridItem.addEventListener("mouseover", function(e) {
+            e.target.style.backgroundColor = "black";
+          });
+        gridContainer.appendChild(gridItem);
+        };
+      };
+
+      document.getElementById("resize").addEventListener("click", resizeGrid);
+      document.getElementById("reset").addEventListener("click", resetGrid);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+#grid-container {
+  width: 600px;
+  height: 450px;
+  border: 100px solid #cd0005;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: #A8A7A2;
+}
+
+.btn {
+  text-align: center;
+  padding-bottom: 20px;
+}

@@ -33,6 +33,8 @@
         const gridItem = document.createElement("div");
         gridItem.setAttribute("id", i + 1);
         gridItem.setAttribute("class", "grid-item");
+        gridContainer.style.setProperty("grid-template-rows", "repeat(16, 1fr)");
+          gridContainer.style.setProperty("grid-template-columns", "repeat(16, 1fr)");
         gridItem.addEventListener("mouseover", function(e) {
           e.target.style.backgroundColor = "black";
         });
@@ -50,8 +52,8 @@
           const gridItem = document.createElement("div");
           gridItem.setAttribute("id", i + 1);
           gridItem.setAttribute("class", "grid-item");
-          gridContainer.style.setProperty("grid-template-rows", "repeat(" + newSize + ", 1fr)");
-          gridContainer.style.setProperty("grid-template-columns", "repeat(" + newSize + ", 1fr)");
+          gridContainer.style.setProperty("grid-template-rows", `repeat(${newSize}, 1fr)`);
+          gridContainer.style.setProperty("grid-template-columns", `repeat(${newSize}, 1fr)`);
           gridItem.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = "black";
           });

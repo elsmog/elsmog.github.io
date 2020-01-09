@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elsmog's calculator</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="first-row">
+        <div id="answer" class="answer">0</div>
+      </div>
+      <div id="second-row">
+        <div class="medium-gray">
+          <button type="button" id="c" class="btn-medium" onClick="assign(this.id)">c</button>
+        </div>
+        <div class="medium-gray">
+          <button type="button" id="<" class="btn-medium" onClick="assign(this.id)"><</button>
+        </div>
+        <div class="medium-gray">
+          <button type="button" id="+/-" class="btn-medium" onClick="assign(this.id)">+/-</button>
+        </div>
+        <div class="orange">
+          <button type="button" id="divide" class="btn-orange" onClick="assign(this.id)">/</button>
+        </div>
+      </div>
+      <div id="third-row">
+        <div class="light-gray">
+          <button type="button" id="7" class="btn" onClick="assign(this.id)">7</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="8" class="btn" onClick="assign(this.id)">8</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="9" class="btn" onClick="assign(this.id)">9</button>
+        </div>
+        <div class="orange">
+          <button type="button" id="multiply" class="btn-orange" onClick="assign(this.id)">x</button>
+        </div>
+      </div>
+      <div id="fourth-row">
+        <div class="light-gray">
+          <button type="button" id="4" class="btn" onClick="assign(this.id)">4</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="5" class="btn" onClick="assign(this.id)">5</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="6" class="btn" onClick="assign(this.id)">6</button>
+        </div>
+        <div class="orange">
+          <button type="button" id="subtract" class="btn-orange" onClick="assign(this.id)">-</button>
+        </div>
+      </div>
+      <div id="fifth-row">
+        <div class="light-gray">
+          <button type="button" id="1" class="btn" onClick="assign(this.id)">1</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="2" class="btn" onClick="assign(this.id)">2</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="3" class="btn" onClick="assign(this.id)">3</button>
+        </div>
+        <div class="orange">
+          <button type="button" id="add" class="btn-orange" onClick="assign(this.id)">+</button>
+        </div>
+      </div>
+      <div id="sixth-row">
+        <div class="double-box">
+          <button type="button" id="0" class="btn" onClick="assign(this.id)">0</button>
+        </div>
+        <div class="light-gray">
+          <button type="button" id="." class="btn"onClick="assign(this.id)">.</button>
+        </div>
+        <div class="orange-bottom">
+          <button type="button" id="=" class="btn-orange" onClick="assign(this.id)">=</button>
+        </div>
+      </div>
+    </div id="calculator">
+  </body>
+  <script src="calculator.js"></script>
+</html>

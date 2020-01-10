@@ -2,17 +2,34 @@ body {
   background-color: black;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #calculator {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
   height: 350px;
   width: 250px;
+  flex-direction: column;
   border-color: #7A797A;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
+  margin: auto;
+  
 }
 
 #first-row {

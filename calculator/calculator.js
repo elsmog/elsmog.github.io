@@ -29,5 +29,5 @@ function assign(clicked) {
 };
 
 function empty(clicked) {
-  displayValue.innerHTML = "";
+  displayValue.innerHTML = "0";
 };

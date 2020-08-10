@@ -68,6 +68,7 @@ def check_spot(user_move, board):
 def choose_mark():
     player_1_mark = ""
     while player_1_mark != "X" and player_1_mark != "O":
+        print("\n" * 100)
         player_1_mark = input("Player 1, please choose X or O: ").upper()
     if player_1_mark == "X":
         return "X", "O"

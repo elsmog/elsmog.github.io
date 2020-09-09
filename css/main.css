@@ -2,6 +2,7 @@ body {
     margin: 60px auto;
     width: 70%;
     background-color: black;
+    color: lightgray;
 }
 
 nav ul, footer ul {
@@ -9,12 +10,10 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    color: lightgray;
 }
 nav ul li, footer ul li {
     display: inline;
-    margin-right: 20px;
-    color: lightgray;
+    margin-right: 20px;  
 }
 a {
     text-decoration: none;
@@ -34,7 +33,6 @@ h2 {
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: lightgray;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -45,10 +43,8 @@ footer {
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
-    color: lightgray;
 }
 
 ul.posts li {
     list-style: none;
-    color: lightgray;
 }

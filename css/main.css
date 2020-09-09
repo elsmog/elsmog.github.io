@@ -28,6 +28,9 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: cornflowerblue;
 }
+h2 {
+    color: cornflowerblue;
+}
 p {
     font-size: 1.5em;
     line-height: 1.4em;
